@@ -35,7 +35,7 @@ services:
     environment:
       OPENSEARCH_HOSTS: '["https://opensearch-node:9200"]'
       OPENSEARCH_USERNAME: "admin"
-      OPENSEARCH_PASSWORD: "SuaSenhaForte123!"
+      OPENSEARCH_PASSWORD: "SUININ@2705"
       OPENSEARCH_SSL_VERIFICATIONMODE: "none" # Desabilita a verificação SSL (apenas para testes)
     networks:
       - opensearch-net
