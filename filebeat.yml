@@ -1,10 +1,13 @@
 filebeat.inputs:
-  - type: log
-    enabled: true
-    paths:
-      - /var/log/*.log  # Você pode ajustar este caminho conforme necessário
+- type: log
+  enabled: true
+  paths:
+    - /var/log/*.log
 
 output.elasticsearch:
-  hosts: ["http://opensearch-node:9200"]  # Certifique-se de que o hostname está correto
-  username: "admin"
-  password: "SuaSenhaForte123!"
+  hosts: ["localhost:9200"]
+
+setup.kibana:
+  host: "localhost:5601"
+
+logging.level: info

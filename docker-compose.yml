@@ -9,16 +9,12 @@ services:
       - bootstrap.memory_lock=true
       - OPENSEARCH_JAVA_OPTS=-Xms1g -Xmx1g
       - OPENSEARCH_INITIAL_ADMIN_PASSWORD=SuaSenhaForte123!
-      - OPENSEARCH_SSL_HTTP_ENABLED=true # Habilita SSL no HTTP
-      - OPENSEARCH_SSL_HTTP_CERTIFICATE=/usr/share/opensearch/config/opensearch.crt # Caminho do certificado
-      - OPENSEARCH_SSL_HTTP_KEY=/usr/share/opensearch/config/opensearch.key # Caminho da chave
     ulimits:
       memlock:
         soft: -1
         hard: -1
     volumes:
       - opensearch-data:/usr/share/opensearch/data
-      - ./certs:/usr/share/opensearch/config # Monta o diretório de certificados
     ports:
       - 9200:9200
       - 9600:9600
